@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Aplicando SVG</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<style>
+    body {
+
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    .navbar {
+
+        max-width: 960px;
+        margin: 0 auto;
+        border: 1px solid black;
+        display: flex;
+        box-sizing: border-box;
+        height: 80px;
+        justify-content: space-between;
+
+    }
+
+
+    .navbar__logo svg {
+
+        padding-top: 20px;
+        width: 50%;
+        height: 50%;
+    }
+
+
+
+    .navbar__list {
+        display: flex;
+        justify-content: flex-end;
+        width: 900px;
+
+    }
+
+    .navbar__item {
+
+        list-style: none;
+        padding: 10px;
+
+
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+
+    }
+    }
+</style>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="363" height="363" viewBox="0 0 363 363">
+                <title> Imagen en buena calidad </title>
+                <desc> Created with Sketch.</desc>
+                <g fill="none">
+                    <g fill="#FF6B6C">
+                        <polygon
+                            transform="translate(-50 -18)translate(231.5 199.5)rotate(-270)translate(-231.5 -199.5)"
+                            points="50.5 18.5 168.6 114.5 412.5 18.5 231.5 199.5 412.5 380.5 168.6 312.9 50.5 380.5" />
+                    </g>
+                </g>
+            </svg>
+        </div>
+
+        <ul class="navbar__list">
+
+            <li class="navbar__item"><a href="#">Nosotros</a></li>
+            <li class="navbar__item"><a href="#">Productos</a></li>
+            <li class="navbar__item"><a href="#">Contacto</a></li>
+
+        </ul>
+    </nav>
+
+</body>
+
+</html>

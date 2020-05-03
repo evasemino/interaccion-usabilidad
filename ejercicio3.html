@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones SVG</title>
+</head>
+<Style>
+    body {
+        background-color: black;
+        margin: 0;
+        padding: 0;
+    }
+
+    .playa {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        height: 100vh;
+    }
+
+    .playa__cielo {
+
+        height: 500px;
+        margin-top: 50px;
+        background-color: #61c1e8;
+        position: relative;
+
+    }
+
+    .playa__sol {
+        animation: aparecer 1s linear;
+        position: absolute;
+        padding-left: 60px;
+        width: 40%;
+
+    }
+
+    @keyframes aparecer {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+
+
+
+    }
+
+    .playa__texto {
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        animation: aparecer 2s ease-in;
+        animation-delay: .2s;
+        left: 300px;
+        padding-left: 130px;
+        padding-top: 200px
+    }
+
+
+
+    .playa__titulo {
+        font-weight: bold;
+        font-size: xx-large;
+    }
+
+    .playa__subtitlo {
+        font-weight: lighter;
+        font-size: small;
+
+    }
+
+    @keyframes desdeDerecha {
+
+        0% {
+            left: -100px;
+        }
+
+        100% {
+            left: 100%;
+
+        }
+    }
+
+
+    .playa__arena {
+
+        height: 200px;
+        background-color: #f1edd9;
+        margin-bottom: 50px;
+        position: relative;
+
+    }
+
+    @keyframes izquierdaDerecha {
+        0% {
+            margin-left: -150px;
+
+        }
+
+        100 % {
+            margin-left: 50px;
+        }
+    }
+
+    .arena__sombrilla {
+
+        height: 80%;
+        left: 10px;
+        position: absolute;
+        animation: izquierdaDerecha 1s ease-in;
+
+    }
+
+    @keyframes aparecerAbajo {
+        0% {
+
+            opacity: 0%;
+
+        }
+
+        100 % {
+            opacity: 100%;
+        }
+    }
+
+    .arena__palmera {
+        width: 15%;
+        top: -90px;
+        right: 250px;
+        position: absolute;
+        animation: aparecerAbajo 1s linear;
+    }
+
+
+
+    .arena__mujer {
+        width: 15%;
+        top: 82px;
+        right: 100px;
+        position: absolute;
+
+    }
+
+    @keyframes derechaIzquierda {
+        0% {
+            margin-right: -100px;
+
+        }
+
+        100 % {
+            margin-right: 50px;
+        }
+    }
+
+    .arena__pelota {
+
+        width: 20%;
+        bottom: -125px;
+        right: 15px;
+        position: absolute;
+        animation: derechaIzquierda 1s ease-in;
+
+
+    }
+</Style>
+
+<main class="playa">
+    <section class="playa__cielo">
+        <div class="playa__sol"> <svg class="playa__sol" xmlns="http://www.w3.org/2000/svg" width="300" height="300"
+                viewBox="0 0 500 500">
+                <polygon
+                    points="420 210 375.8 247.9 399.2 301.1 342.9 316 340.9 374.2 283.8 363.2 256.7 414.8 210 380 163.3 414.8 136.2 363.2 79.1 374.2 77.1 316 20.8 301.1 44.2 247.9 0 210 44.2 172.1 20.8 118.9 77.1 104 79.1 45.8 136.2 56.8 163.3 5.2 210 40 256.7 5.2 283.8 56.8 340.9 45.8 342.9 104 399.2 118.9 375.8 172.1 "
+                    fill="#F5C525" />
+                <circle cx="210" cy="210" r="140" fill="#F8A805" /></svg></div>
+        <div class="playa__texto">
+            <h1 class="playa__titulo">Vive el Verano</h1>
+            <p class="playa__subtitlo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio eveniet fugiat
+                porro reprehenderit saepe enim est dolor eum provident maxime, ullam id unde qui rem aliquam. Aut minima
+                dolorum doloremque!</p>
+        </div>
+    </section>
+
+    <section class="playa__arena">
+        <div class="arena__sombrilla">
+            <svg class="arena__sombrilla" xmlns="http://www.w3.org/2000/svg" width="200" viewBox="0 0 512 512">
+                <g fill="#ef495b">
+                    <path
+                        d="M255.23 414.029l88.641-222.402c3.709-9.306 14.26-13.844 23.566-10.135 9.306 3.709 13.844 14.26 10.135 23.566l-84.653 212.396-37.689-3.425z"
+                        fill="#90a4ae" />
+                    <path d="M290.171 220.482l.027-.063-.026.004-.001.059z" fill="#fff9c5" />
+                    <path
+                        d="M399.536 100.961l-66.884 7.189-42.481 49.475.007 62.783.03-.012-.01.022c18.552-3.445 39.208-1.638 59.202 6.331 19.867 7.918 36.018 20.704 47.109 35.837l.194.354 34.942-34.596 3.898-86.328-36.007-41.055z"
+                        fill="#fff9c5" />
+                    <path
+                        d="M290.178 220.409c-11.098-15.259-27.334-28.156-47.327-36.125-20.003-7.973-40.671-9.778-59.228-6.327 0 0 90.046-127.161 215.914-76.995 0 0-66.007 17.655-109.365 119.521l.006-.074z" />
+                    <path
+                        d="M396.749 262.884c18.552-3.443 39.208-1.636 59.202 6.333 20.003 7.973 36.247 20.878 47.342 36.148 0 0 22.11-154.238-103.758-204.405 0 0 35.767 58.218-2.831 161.98l.045-.056z" />
+                </g>
+            </svg>
+        </div>
+        <div class="arena__palmera">
+            <svg arena__palmera xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59 59">
+                <g>
+                    <path
+                        d="M30.34 17.966c-.114.009-.224.034-.34.034a3.963 3.963 0 0 1-2.52-.917c.319.57.52 1.215.52 1.917 0 .6-.1 1.164-.378 1.675C29.698 31.774 32.325 51.675 26 58h14s-.39-26.086-9.66-40.034z"
+                        fill="#805333" />
+                    <circle cx="30" cy="14" r="4" fill="#cbb292" />
+                    <path
+                        d="M36.856 5.684c-3.486.934-6.354 2.7-8.138 4.545A3.954 3.954 0 0 1 30 10a3.985 3.985 0 0 1 3.772 2.722l3.188-.854.931-2.32 1.967 1.544L50 8.374c-.715-2.667-6.742-4.405-13.144-2.69z"
+                        fill="#4fba6f" />
+                    <path
+                        d="M27.563 10.849c-.86-2.6-3.409-5.828-7.19-8.117C14.703-.699 8.43-.71 7 1.652l8.983 5.437 2.319-.934.248 2.488 7.531 4.558a3.982 3.982 0 0 1 1.482-2.352z"
+                        fill="#4c8056" />
+                    <path
+                        d="M26 14c0-.33.051-.646.127-.953-2.019-1.85-7.016-2.771-12.271-1.362C7.454 13.4 3.103 17.918 3.818 20.586l10.142-2.718.931-2.32 1.967 1.544 4.737-1.269A3.957 3.957 0 0 1 24 15c.165 0 .322.029.482.049l1.581-.424A4.023 4.023 0 0 1 26 14z"
+                        fill="#4fba6f" />
+                    <path
+                        d="M26.501 15.902A3.956 3.956 0 0 0 24 15a4 4 0 1 0 4 4c0-.692-.192-1.334-.501-1.902a3.986 3.986 0 0 1-.998-1.196z"
+                        fill="#7f6e5d" />
+                </g>
+            </svg>
+        </div>
+
+        <div class="arena__pelota">
+            <svg class="arena__pelota" height="511pt" viewBox="0 0 511 511.91" width="300px"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M420.117 59.145a253.804 253.804 0 0 0-118.73-55.172h-.176A249.582 249.582 0 0 0 256.457 0C146.836-.066 49.363 69.742 14.137 173.55l-.086.09a256.218 256.218 0 0 0 11.387 192.704v.09c45.207 94.445 143.375 151.843 247.855 144.914 104.48-6.934 194.207-76.793 226.543-176.383 32.336-99.59.762-208.836-79.719-275.82zm0 0"
+                    fill="#ff5364" />
+                <g fill="#f3d55b">
+                    <path
+                        d="M499.656 335.977c-28.047 85.218-98.636 149.55-186.086 169.578v-.086a476.518 476.518 0 0 1-89.687-216.895c-7.594-56.496-10.418-93.219-11.39-116.699a72.146 72.146 0 0 0 16.948-7.152 70.48 70.48 0 0 0 32.047-38.84h.086c30.723 7.855 84.04 29.66 148.48 88.187a367.391 367.391 0 0 1 89.512 121.907zm0 0M420.117 59.145c-92.601-12.977-143.27-.442-169.754 12.89a57.958 57.958 0 0 0-40.96-17.48C222.558 23.57 263.515 9.977 301.21 3.973h.176a253.804 253.804 0 0 1 118.73 55.172zm0 0M147.7 153.602a571.82 571.82 0 0 0-82.098 88.449 204.83 204.83 0 0 0-40.165 124.293A256.218 256.218 0 0 1 14.052 173.64l.086-.09c51.113-63.207 94.457-70.973 123.675-64.531a53.37 53.37 0 0 0 5.649 38.312 43.27 43.27 0 0 0 4.238 6.27zm0 0" />
+                </g>
+            </svg>
+
+        </div>
+        <div class="arena__mujer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 512 512">
+                <path
+                    d="M445.6 415.2H241V194.4h173.2l16.7 66C462.4 275 483 306.8 483 342c0 27.2-12.1 52.7-33.3 69.9l-4.1 3.4z"
+                    fill="#331d17" />
+                <path
+                    d="M62.3 411.9C41.1 394.7 29 369.2 29 342c0-35.2 20.6-67 52.1-81.6l16.7-66H256v220.9H66.4l-4.1-3.4z"
+                    fill="#5b3227" />
+                <path d="M396 210h-22.8l0.3-85H396c23.4 0 42.5 19.1 42.5 42.5S419.4 210 396 210z" fill="#bf4e2e" />
+                <path d="M396 155v16.9c0 77.2-62.8 140-140 140l-40-282L396 155z" fill="#cf6446" />
+                <path d="M256 19.9v292c-77.2 0-140-62.8-140-140 0 0 15.9-152 140-152z" fill="#d97a5f" />
+                <path d="M483 477v35h-60l-217-40 50-130h92c74.4 0 135 60.6 135 135z" fill="#cf6446" />
+                <path d="M256 342v140L89 512H29v-35c0-74.4 60.6-135 135-135h92z" fill="#d97a5f" />
+                <path d="M348 402h-92l-50 70 187 40h30v-35c0-41.4-33.6-75-75-75z" fill="#71b04a" />
+                <path d="M164 402c-41.3 0-75 33.6-75 75v35h30l137-80v-30h-92z" fill="#82cc56" />
+                <path d="M396 140v15h-85c-23.8 0-45-14.1-54.5-35H256l-30-60 30-60c77.2 0 140 62.8 140 140z"
+                    fill="#331d17" />
+                <path
+                    d="M116 140v32h30v-32c0-39.2 20.6-73.6 51.5-93.1A59.9 59.9 0 0 0 196 60c0 33.1 26.9 60 60 60V0c-77.2 0-140 62.8-140 140z"
+                    fill="#5b3227" />
+                <path d="M393 477v35H256l-50-40 50-40h92c24.8 0 45 20.2 45 45z" fill="#82cc56" />
+                <path d="M256 432v80H119v-35c0-24.8 20.2-45 45-45h92z" fill="#9ce072" />
+                <path
+                    d="M158.2 142.5c6.1 10.5 5 23.2-1.6 32.5 6.7 9.3 7.7 22 1.6 32.5-6.1 10.5-17.6 16-29 14.9-4.7 10.4-15.2 17.7-27.3 17.7l-34.7-65 34.7-65c12.2 0 22.6 7.2 27.3 17.7 11.4-1.1 22.9 4.3 29 14.9z"
+                    fill="#ffd640" />
+                <path
+                    d="M101.9 110v130c-12.2 0-22.6-7.2-27.3-17.6-11.4 1.1-22.9-4.3-29-14.8-6.1-10.5-5-23.2 1.6-32.5-6.7-9.3-7.7-22-1.6-32.5 6.1-10.5 17.6-16 29-14.8C79.2 117.2 89.7 110 101.9 110z"
+                    fill="#fff666" />
+                <path d="M101.9 137.5l-17.5 37.5 17.5 37.5c20.7 0 37.5-16.8 37.5-37.5s-16.8-37.5-37.5-37.5z"
+                    fill="#fff0eb" />
+                <path d="M64.4 175c0 20.7 16.8 37.5 37.5 37.5v-75c-20.7 0-37.5 16.8-37.5 37.5z" fill="#fff" />
+                <circle cx="101.9" cy="175" r="15" fill="#82cc56" /></svg>
+        </div>
+        </div>
+    </section>
+    </body>
+
+</html>
